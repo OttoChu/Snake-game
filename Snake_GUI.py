@@ -30,7 +30,7 @@ def draw_board():
             pygame.draw.rect(screen, colour, (x * 30 + 50, y * 30 + 50, 30, 30))
 
 def draw_score(length):
-    font = pygame.font.Font("D:\_Work\_Computer Science\A Level\_random code\Snake\Pixeltype.ttf", 50)
+    font = pygame.font.Font("Pixeltype.ttf", 50)
     text_surf = font.render(f'Your score: {str(length - 1)}', True, RED)
     text_rect = text_surf.get_rect(topleft = (10, 10))
     screen.blit(text_surf, text_rect)
@@ -128,15 +128,15 @@ while True:
         except:
             pass
     if lost:
-        font = pygame.font.Font("D:\_Work\_Computer Science\A Level\_random code\Snake\Pixeltype.ttf", 100)
+        font = pygame.font.Font("Pixeltype.ttf", 100)
         text_surf = font.render('You lost!', True, RED)
         text_rect = text_surf.get_rect(center = (275, 250))
-        font = pygame.font.Font("D:\_Work\_Computer Science\A Level\_random code\Snake\Pixeltype.ttf", 50)
+        font = pygame.font.Font("Pixeltype.ttf", 50)
         score_surf = font.render(f'Score: {str(len(snake_pos) - 1)}', True, RED)
         score_rect = score_surf.get_rect(center = (275, 300))
         screen.blit(text_surf, text_rect)
         screen.blit(score_surf, score_rect)
-        font = pygame.font.Font("D:\_Work\_Computer Science\A Level\_random code\Snake\Pixeltype.ttf", 50)
+        font = pygame.font.Font("Pixeltype.ttf", 50)
         new_game_text_surf = font.render('New game', True, BLACK)
         new_game_text_rect = new_game_text_surf.get_rect(center = (275, 380))
         new_game_rect = pygame.Rect((175, 350, 200, 50))
@@ -144,11 +144,11 @@ while True:
         pygame.draw.rect(screen, BLACK, new_game_rect, 2)
         screen.blit(new_game_text_surf,new_game_text_rect)
     elif win:
-        font = pygame.font.Font("D:\_Work\_Computer Science\A Level\_random code\Snake\Pixeltype.ttf", 200)
+        font = pygame.font.Font("Pixeltype.ttf", 200)
         text_surf = font.render('You WIN!', True, RED)
         text_rect = text_surf.get_rect(center = (275, 250))
         screen.blit(text_surf, text_rect)
-        font = pygame.font.Font("D:\_Work\_Computer Science\A Level\_random code\Snake\Pixeltype.ttf", 50)
+        font = pygame.font.Font("Pixeltype.ttf", 50)
         new_game_text_surf = font.render('New game', True, BLACK)
         new_game_text_rect = new_game_text_surf.get_rect(center = (275, 380))
         new_game_rect = pygame.Rect((175, 350, 200, 50))
