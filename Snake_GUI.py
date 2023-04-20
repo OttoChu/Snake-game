@@ -117,6 +117,7 @@ while True:
                 key = 'S'
             if event.key == pygame.K_RIGHT:
                 key = 'D'
+                
         try:
             if new_game_rect.collidepoint(pygame.mouse.get_pos()) and pygame.mouse.get_pressed()[0]:
                 snake_pos = [[7, 7]]
